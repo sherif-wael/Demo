@@ -14,6 +14,12 @@ const ar = {
     "admission.desc": `.للتقديم في المدرسة يشترط على الطالب أن يكون حاصل على الشهادة الاعدادية العامة او الازهرية بمجموع لا يقل عن ١٤٠ درجة و أن لا يزيد سنه عن ١٨ سنه في يوم ١ سبتمبر من عام التسجيل`,
     "btn.more": "المزيد",
     "btn.less": "الاقل",
+    "footer.desc": `
+        We strive to provide an educational environment that encourages 
+        creativity, innovation and enterpreneurship.
+    `,
+    "footer.contact": "Connect with us"
+
 }
 
 
