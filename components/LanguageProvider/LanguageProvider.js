@@ -27,7 +27,7 @@ function LanguageProvider({children}){
 
     return (
         <LanguageContext.Provider value={value}>
-            <div>
+            <div style={{textAlign: lng.direction}}>
                 {children}
             </div>
         </LanguageContext.Provider>

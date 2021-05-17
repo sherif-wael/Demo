@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { SectionHeader } from "../Common";
 import { partners } from "../../lib/constants";
+import { useLangauge, useLanguage } from "../LanguageProvider";
 
 const PartnersSection = styled.section`
     max-width: 1600px;
@@ -59,9 +60,11 @@ const LogoWrapper = styled.div`
 
 
 function Partners(){
+    const {t} = useLanguage();
+    
     return (
         <PartnersSection id="partners">
-            <SectionHeader>Success Partners</SectionHeader>
+            <SectionHeader>{t("partners.header")}</SectionHeader>
 
             <LogoWrapper>
                 {

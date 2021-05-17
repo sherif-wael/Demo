@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useLanguage } from "../LanguageProvider";
 
 
 const HeroSeciton = styled.section`
@@ -45,10 +46,11 @@ const HeroHeader = styled.h2`
 
 
 function Hero(){
+    const {t} = useLanguage();
     return (
         <HeroSeciton>
             <HeroHeader>
-                your future is our priority
+                {t("hero.desc")}
             </HeroHeader>
         </HeroSeciton>
     )

@@ -1,5 +1,6 @@
 const en = {
     direction: "left",
+    "hero.desc": "your future is our priority",
     "about.header": "About",
     "about.desc": `Education is the basis for the renaissance of nations and the secret of their progress, so we have to keep pace with the developments of technologies and work to develop education in a way that meets the needs of the current stage.
 
@@ -17,7 +18,8 @@ const en = {
         We strive to provide an educational environment that encourages 
         creativity, innovation and enterpreneurship.
     `,
-    "footer.contact": "Connect with us"
+    "footer.contact": "Connect with us",
+    "partners.header": "Success Partners"
 };
 
 

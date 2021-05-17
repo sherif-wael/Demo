@@ -34,8 +34,9 @@ const AboutContent = styled.article`
         color: var(--secondary-color);
         font-size: 14px;
         font-weight: 600;
-        margin: 0 0 0 5px;
+        margin: 0 5px;
         cursor: pointer;
+        display: inline;
     }
 
     ${props => (
