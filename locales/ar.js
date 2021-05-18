@@ -1,5 +1,5 @@
 const ar = {
-    direction: "right",
+    direction: "rtl",
     "hero.desc": "مستقبلك هو أولويتنا",
     "about.header": "نبذة عنا",
     "about.desc": `
@@ -19,8 +19,11 @@ const ar = {
     "footer.desc": `
         نسعى جاهدين لتوفير بيئة تعليمية تشجع الإبداع والابتكار وريادة الأعمال
     `,
-    "footer.contact": "تواصل معنا"
-
+    "footer.contact": "تواصل معنا",
+    "nav.home": "الرئيسية",
+    "nav.about": "نبذة",
+    "nav.admission": "التقديم",
+    "nav.partners": "الشركاء"
 }
 
 

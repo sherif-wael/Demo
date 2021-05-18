@@ -33,7 +33,7 @@ const FooterDesc = styled.div`
     .logo{
         width: 48px;
         height: 48px;
-        margin-right: 16px;
+        margin: 0 16px;
 
         @media (min-width: 680px){
             width: 80px;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { navLinks } from "../../lib/constants";
+import { useLanguage } from "../LanguageProvider";
 
 const Header = styled.header`
     background-color: var(--primary-color);
@@ -64,13 +65,15 @@ const Toggler = styled.button`
 
 
 const Nav = styled.nav`
+    display: flex;
+    align-items: center;
 
     .nav-link{
         text-decoration: none;
         padding: 0;
         margin: 0;
         color: #fff;
-        margin: 0 16px 0 0;
+        margin: 0 12px;
 
         @media (max-width: 680px){
             margin: 0 0 25px 0;
@@ -100,10 +103,28 @@ const Nav = styled.nav`
     &.nav-opened{
         transform: translateX(0px);
     }
+
+    .locale-toggler{
+        border: none;
+        background-color: transparent;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        .globe-icon{
+            width: 16px;
+            margin: 0 3px;
+            height: 16px;
+        }
+    }
 `
 
 function Navbar(){
     const [isOpened, setIsOpened] = React.useState(false);
+    const {t, locale, setLocale} = useLanguage();
+
+    const newLocale = locale === "en" ? "Ar" : "En"
 
     const handleClick = () => {
         setIsOpened(!isOpened);
@@ -124,9 +145,15 @@ function Navbar(){
             <Nav className={className}>
                 {
                     navLinks.map(({name, href}, i) => (
-                        <a className="nav-link" href={href} key={i}>{name}</a>
+                        <a className="nav-link" href={href} key={i}>{t(name)}</a>
                     ))
                 }
+
+                <button className="locale-toggler" 
+                        onClick={() => setLocale(newLocale.toLowerCase())}>
+                    <img src="/icons/globe.svg"  alt="language" className="globe-icon" />
+                    {newLocale}
+                </button>
             </Nav>
         </Header>
     )
